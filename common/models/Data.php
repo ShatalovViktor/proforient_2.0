@@ -1,23 +1,23 @@
 <?php
 
-namespace backend\models;
+namespace common\models;
 
 use Yii;
 
 /**
- * This is the model class for table "cities".
+ * This is the model class for table "data".
  *
  * @property integer $id
- * @property integer $id_region
+ * @property integer $id_school
  */
-class Cities extends \yii\db\ActiveRecord
+class Data extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'cities';
+        return 'data';
     }
 
     /**
@@ -26,8 +26,8 @@ class Cities extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_region'], 'required'],
-            [['id_region'], 'integer']
+            [['id_school'], 'required'],
+            [['id_school'], 'integer']
         ];
     }
 
@@ -38,7 +38,7 @@ class Cities extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_region' => 'Id Region',
+            'id_school' => 'Id School',
         ];
     }
 }

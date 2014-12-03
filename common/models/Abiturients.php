@@ -1,24 +1,23 @@
 <?php
 
-namespace backend\models;
+namespace common\models;
 
 use Yii;
 
 /**
- * This is the model class for table "schools".
+ * This is the model class for table "abiturients".
  *
  * @property integer $id
- * @property integer $id_user
- * @property integer $id_city
+ * @property integer $id_data
  */
-class Schools extends \yii\db\ActiveRecord
+class Abiturients extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'schools';
+        return 'abiturients';
     }
 
     /**
@@ -27,8 +26,8 @@ class Schools extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_user', 'id_city'], 'required'],
-            [['id_user', 'id_city'], 'integer']
+            [['id_data'], 'required'],
+            [['id_data'], 'integer']
         ];
     }
 
@@ -39,8 +38,7 @@ class Schools extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_user' => 'Id User',
-            'id_city' => 'Id City',
+            'id_data' => 'Id Data',
         ];
     }
 }
