@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property integer $id_region
+ * @property string $title
  */
 class Cities extends \yii\db\ActiveRecord
 {
@@ -26,8 +27,9 @@ class Cities extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_region'], 'required'],
-            [['id_region'], 'integer']
+            [['id_region', 'title'], 'required'],
+            [['id_region'], 'integer'],
+            [['title'], 'string', 'max' => 155]
         ];
     }
 
@@ -39,6 +41,7 @@ class Cities extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'id_region' => 'Id Region',
+            'title' => 'Title',
         ];
     }
 }
