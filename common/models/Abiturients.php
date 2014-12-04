@@ -46,7 +46,7 @@ class Abiturients extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'id_data' => 'Id Data',
-            'first_name' => 'First Name',
+            'first_name' => 'Имя',
             'last_name' => 'Last Name',
             'father_name' => 'Father Name',
             'telephone' => 'Telephone',
