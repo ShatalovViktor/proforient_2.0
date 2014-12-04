@@ -36,14 +36,12 @@ AppAsset::register($this);
                 ['label' => 'Абитуриенты', 'url' => ['/abiturients/index']],
                 ['label' => 'Города', 'url' => ['/cities/index']],
                 ['label' => 'Регионы', 'url' => ['/regions/index']],
-                ['label' => 'Институты', 'url' => ['/regions/index']],
-                ['label' => 'Факультеты', 'url' => ['/regions/index']],
-                ['label' => 'Кафедры', 'url' => ['/regions/index']],
-                ['label' => 'Направления', 'url' => ['/regions/index']],
-                ['label' => 'Специальности', 'url' => ['/regions/index']],
+                ['label' => 'Институты', 'url' => ['/institutes/index']],
+                ['label' => 'Факультеты', 'url' => ['/faculties/index']],
+                ['label' => 'Кафедры', 'url' => ['/departments/index']],
+                ['label' => 'Направления', 'url' => ['/directions/index']],
+                ['label' => 'Специальности', 'url' => ['/specialty/index']],
                 ['label' => 'Пользователи', 'url' => ['/user/index']],
-
-
             ];
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
