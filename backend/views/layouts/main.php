@@ -32,11 +32,15 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
                 ['label' => 'Школы', 'url' => ['/schools/index']],
                 ['label' => 'Абитуриенты', 'url' => ['/abiturients/index']],
                 ['label' => 'Города', 'url' => ['/cities/index']],
                 ['label' => 'Регионы', 'url' => ['/regions/index']],
+                ['label' => 'Институты', 'url' => ['/regions/index']],
+                ['label' => 'Факультеты', 'url' => ['/regions/index']],
+                ['label' => 'Кафедры', 'url' => ['/regions/index']],
+                ['label' => 'Направления', 'url' => ['/regions/index']],
+                ['label' => 'Специальности', 'url' => ['/regions/index']],
                 ['label' => 'Пользователи', 'url' => ['/user/index']],
 
 
