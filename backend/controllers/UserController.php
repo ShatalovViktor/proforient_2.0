@@ -62,8 +62,18 @@ class UserController extends Controller
     {
         $model = new User();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $arPost = Yii::$app->request->post();
+            $model->created_at = time();
+            $model->updated_at = time();
+            $model->setPassword($arPost['User']['password']);
+            $model->generateAuthKey();
+                 if ($model->save())
+                    return $this->redirect(['view', 'id' => $model->id]);
+                else{
+                    $errors = $model->errors;
+                    var_dump($errors);
+                }
         } else {
             return $this->render('create', [
                 'model' => $model,

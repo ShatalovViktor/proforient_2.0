@@ -12,9 +12,17 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'role')->textInput() ?>
+    <?= $form->field($model, 'first_name')->textInput(['maxlength' => 100]) ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <?= $form->field($model, 'last_name')->textInput(['maxlength' => 100]) ?>
+
+    <?= $form->field($model, 'username')->textInput(['maxlength' => 255])->label('Логин') ?>
+
+    <?= $form->field($model, 'email')->textInput(['maxlength' => 255]) ?>
+
+    <?= $form->field($model, 'password')->passwordInput(['maxlength' => 255])->label('Пароль'); ?>
+
+    <?= $form->field($model, 'role')->dropDownList([0=>'Администратор',1=>'Модератор',3=>'Ответственный по школе']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
